@@ -1,3 +1,1 @@
-export const setPokemonInfo = (data: any) => {
-  return { type: 'SET_INFO', payload: data };
-};
+export const setPokemonInfo = (data: any) => ({ type: 'SET_INFO', payload: data });

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './store';
 import AppRouter from './router';
-import './index.css';
+import './index.scss';
 import * as serviceWorker from './serviceWorker';
 
 
@@ -11,7 +11,7 @@ ReactDOM.render(
   <Provider store={configureStore()}>
     <AppRouter />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
