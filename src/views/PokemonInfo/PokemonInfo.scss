@@ -1,0 +1,139 @@
+@import "../../styles/colors";
+
+.info {
+
+  padding: 50px;
+
+  @media screen and (max-width: 480px) {
+    padding: 50px 10px;
+  }
+
+  &__title {
+    display: flex;
+
+    &__number {
+      align-items: center;
+      color: $COLOR_GRAY;
+      display: flex;
+      margin-left: 10px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-gap: 2vw;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  &__image {
+    height: 400px;
+    max-width: calc(100vw - 60px);
+    width: 400px;
+  }
+
+  &__info {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    &__grid {
+      display: grid;
+      grid-gap: 2vw;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  }
+
+  &__characteristic {
+    background-color: $COLOR_YELLOW;
+    border-radius: 15px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    width: 250px;
+
+    &__data {
+      &__title {
+        color: $COLOR_GRAY;
+        display: block;
+        font-size: 18px;
+      }
+
+      &__list {
+        display: block;
+      }
+    }
+  }
+
+  &__stats {
+    background: $COLOR_GRAY;
+    border-radius: 15px;
+    max-width: calc(100vw - 60px);
+    padding: 15px;
+
+    &__title {
+      display: block;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    &__stat {
+      align-items: center;
+      background: $COLOR_BLUE;
+      border-radius: 15px;
+      display: flex;
+      height: 45px;
+      margin-bottom: 5px;
+      padding: 5px;
+    }
+  }
+
+  &__types {
+    &__title {
+      display: block;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    &__content {
+      display: flex;
+    }
+
+    &__chip {
+      border-radius: 15px;
+      color: $COLOR_WHITE;
+      height: 25px;
+      margin-right: 10px;
+      text-align: center;
+      width: 100px;
+
+      &--grass {
+        background: #9BCC50;
+      }
+
+      &--fire {
+        background: #FD7D24;
+      }
+
+      &--poison {
+        background: #B97FC9;
+      }
+
+      &--flying {
+        background: #3DC7EF;
+      }
+
+      &--water {
+        background: #4592C4;
+      }
+
+      &--bug {
+        background: #729F3F;
+      }
+
+      &--normal {
+        background: #A4ACAF;
+      }
+    }
+  }
+}

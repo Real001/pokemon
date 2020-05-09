@@ -3,21 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.19.2",
-    "dotenv": "^8.2.0",
-    "history": "^4.10.1",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-redux": "^7.2.0",
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2",
+    "@testing-library/jest-dom": "4.2.4",
+    "@testing-library/react": "9.5.0",
+    "@testing-library/user-event": "7.2.1",
+    "axios": "0.19.2",
+    "classnames": "2.2.6",
+    "dotenv": "8.2.0",
+    "history": "4.10.1",
+    "node-sass": "4.14.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "7.2.0",
+    "react-router": "5.1.2",
+    "react-router-dom": "5.1.2",
     "react-scripts": "3.4.1",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -62,7 +63,6 @@
     "rules": {
       "no-console": "error",
       "no-debugger": "error",
-      "import/prefer-default-export": "error",
       "no-underscore-dangle": "off",
       "no-param-reassign": "error",
       "vars-on-top": "error",
@@ -94,8 +94,21 @@
           "tsx": "never"
         }
       ],
-      "react/jsx-filename-extension": "off"
-    }
+      "react/jsx-filename-extension": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "import/prefer-default-export": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/*.tsx"
+        ],
+        "rules": {
+          "react/prop-types": "off",
+          "no-nested-ternary": "off"
+        }
+      }
+    ]
   },
   "browserslist": {
     "production": [
@@ -110,26 +123,28 @@
     ]
   },
   "devDependencies": {
-    "@namics/stylelint-bem": "^6.3.1",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "@types/react-redux": "^7.1.8",
-    "@types/react-router": "^5.1.7",
-    "@types/react-router-dom": "^5.1.5",
-    "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "@typescript-eslint/parser": "^2.31.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.1.0",
-    "eslint-import-resolver-typescript": "^2.0.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-sonarjs": "^0.5.0",
-    "lint-staged": "^10.2.2",
-    "stylelint-config-sass-guidelines": "^7.0.0",
-    "stylelint-scss": "^3.17.2",
-    "stylelint-selector-bem-pattern": "^2.1.0"
+    "@namics/stylelint-bem": "6.3.1",
+    "@types/classnames": "2.2.10",
+    "@types/jest": "24.9.1",
+    "@types/node": "12.12.38",
+    "@types/react": "16.9.34",
+    "@types/react-dom": "16.9.7",
+    "@types/react-redux": "7.1.8",
+    "@types/react-router": "5.1.7",
+    "@types/react-router-dom": "5.1.5",
+    "@typescript-eslint/eslint-plugin": "2.31.0",
+    "@typescript-eslint/parser": "2.31.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-sonarjs": "0.5.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.2",
+    "stylelint-config-sass-guidelines": "7.0.0",
+    "stylelint-scss": "3.17.2",
+    "stylelint-selector-bem-pattern": "2.1.0"
   },
   "husky": {
     "hooks": {

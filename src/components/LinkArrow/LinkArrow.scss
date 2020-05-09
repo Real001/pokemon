@@ -1,0 +1,16 @@
+@import "../../styles/colors";
+
+.link-arrow {
+  background: $COLOR_BLACK_YELLOW;
+  border: 0;
+  border-radius: 20px;
+  display: flex;
+  padding: 5px;
+  text-decoration: none;
+  width: 60px;
+
+  &__icon {
+    margin-right: 5px;
+    width: 20px;
+  }
+}

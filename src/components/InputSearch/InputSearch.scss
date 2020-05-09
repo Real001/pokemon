@@ -1,0 +1,83 @@
+@import "../../styles/colors";
+
+.input-search {
+  background: #FFF;
+  border: 3px solid $COLOR_YELLOW;
+  border-radius: 20px;
+  display: flex;
+  width: fit-content;
+
+  &__field {
+    background: transparent !important;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+  }
+
+  &__input {
+    background: transparent;
+    border: 0;
+    font-size: 13px;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__label {
+    background: transparent;
+    color: #BBB;
+    font-size: 11px;
+    left: 20px;
+    padding: 0 2px;
+    pointer-events: none;
+    position: absolute;
+    text-transform: uppercase;
+    top: 4px;
+    transform: translateY(4px);
+    transition: transform 100ms ease;
+    z-index: 2;
+
+    &--active {
+      transform: translateY(-20px);
+    }
+  }
+
+  :focus-within {
+    .input-search__label {
+      transform: translateY(-20px);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 70px;
+  }
+
+  &__button {
+    background: none;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+    outline: none;
+
+    &__icon {
+      fill: $COLOR_GRAY;
+
+      &__clear {
+        height: 12px;
+        width: 12px;
+      }
+    }
+
+    &--not-show {
+      display: none;
+    }
+  }
+}

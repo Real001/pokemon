@@ -1,6 +1,11 @@
 import { combineReducers } from 'redux';
-import pokemonInfo from './pokemonInfo/reducer';
+import pokemonList, { StatePokemonList } from './polemonList/reducer';
+
+
+export interface ReduxState {
+  pokemonList: StatePokemonList;
+}
 
 export default combineReducers({
-  pokemonInfo,
+  pokemonList,
 });

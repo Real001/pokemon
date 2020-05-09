@@ -1,0 +1,17 @@
+@import "../../styles/colors";
+
+.pokemon-card {
+  display: flex;
+  justify-content: center;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__title {
+    color: $COLOR_BLACK;
+    margin: 0;
+    text-align: center;
+  }
+
+}

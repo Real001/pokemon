@@ -1,0 +1,9 @@
+.ability {
+  padding: 50px;
+
+  @media screen and (max-width: 480px) {
+    padding: 50px 10px;
+  }
+
+}
+
