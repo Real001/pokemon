@@ -15,7 +15,7 @@ const AbilityInfo: React.FC = () => {
   return (
     <div className="ability-info">
       <ButtonArrow onClick={history.goBack} />
-      { abilityState.isLoading ? (
+      {abilityState.isLoading ? (
         <div className="loading">
           <LoaderIcon className="loading__icon" />
         </div>
@@ -30,7 +30,7 @@ const AbilityInfo: React.FC = () => {
           <h2 className="font-h2">{abilityState.data.name}</h2>
           <div>
             <h5 className="font-h5">Description</h5>
-            { abilityState.data.effect_entries.map((effect) => (
+            {abilityState.data.effect_entries.map((effect) => (
               <p key={effect.effect}>{effect.effect}</p>
             ))}
           </div>

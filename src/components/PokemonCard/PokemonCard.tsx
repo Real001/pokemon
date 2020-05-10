@@ -4,12 +4,12 @@ import { BaseItem } from '../../types/entitiesBase';
 
 import './PokemonCard.scss';
 
-interface PokemonCardInterface {
+interface PokemonCardProps {
   pokemon: BaseItem;
   link: string;
 }
 
-const PokemonCard: React.FC<PokemonCardInterface> = ({ pokemon, link }) => (
+const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, link }) => (
   <div className="pokemon-card">
     <Link to={`${link}/${pokemon.name}`} className="pokemon-card__link">
       <img src="https://via.placeholder.com/200" alt={pokemon.name} />

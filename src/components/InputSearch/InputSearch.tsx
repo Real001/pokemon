@@ -5,11 +5,11 @@ import { ReactComponent as ClearIcon } from '../../assets/icons/clear.svg';
 
 import './InputSearch.scss';
 
-interface InputSearchComponent {
+interface InputSearchProps {
   onSearch: (value: string) => void;
 }
 
-const InputSearch: React.FC<InputSearchComponent> = ({ onSearch }) => {
+const InputSearch: React.FC<InputSearchProps> = ({ onSearch }) => {
   const [value, setValue] = useState('');
 
   const classLabel = classnames('input-search__label', {

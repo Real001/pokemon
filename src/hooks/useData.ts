@@ -3,8 +3,9 @@ import { State } from '../types/entitiesBase';
 import { Response } from '../agent';
 
 
-export default <T>(name: string, getRequest: (name: string) =>
-  Promise<Response<T>>): State<T | null> => {
+export default <T>(
+  name: string, getRequest: (name: string) => Promise<Response<T>>,
+): State<T | null> => {
   const [data, setData] = useState<T | null>(null);
   const [isLoading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);

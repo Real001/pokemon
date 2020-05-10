@@ -42,15 +42,15 @@ const PokemonInfo: React.FC = () => {
                 <div className="info__characteristic">
                   <div className="info__characteristic__data">
                     <span className="info__characteristic__data__title">Height</span>
-                    <span>{ pokemonState.data.height }</span>
+                    <span>{pokemonState.data.height}</span>
                   </div>
                   <div className="info__characteristic__data">
                     <span className="info__characteristic__data__title">Species</span>
-                    <span>{ pokemonState.data.species.name }</span>
+                    <span>{pokemonState.data.species.name}</span>
                   </div>
                   <div className="info__characteristic__data">
                     <span className="info__characteristic__data__title">Weight</span>
-                    <span>{ pokemonState.data.weight }</span>
+                    <span>{pokemonState.data.weight}</span>
                   </div>
                   <div className="info__characteristic__data">
                     <span className="info__characteristic__data__title">Abilities</span>
@@ -89,7 +89,6 @@ const PokemonInfo: React.FC = () => {
             </div>
           </div>
         </div>
-
       )}
     </div>
   );

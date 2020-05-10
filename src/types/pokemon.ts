@@ -7,7 +7,7 @@ export interface PokemonList {
   count: number;
 }
 
-interface Abilitie {
+interface Ability {
   ability: BaseItem;
   is_hidden: boolean;
   slot: null;
@@ -53,7 +53,7 @@ interface Type {
 
 export interface PokemonInfo {
   id: number;
-  abilities: Abilitie[];
+  abilities: Ability[];
   base_experience: number;
   forms: BaseItem[];
   game_indices: GameIndice[];
