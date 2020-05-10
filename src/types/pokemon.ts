@@ -68,5 +68,4 @@ export interface PokemonInfo {
   stats: Stat[];
   types: Type[];
   weight: number;
-
 }

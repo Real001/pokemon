@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import usePokemon from '../../hooks/usePokemon';
 import { ReactComponent as LoaderIcon } from '../../assets/icons/loader.svg';
 import { LinkArrow } from '../../components/LinkArrow';
+import useData from '../../hooks/useData';
+import getPokemonInfo from '../../services/getPokemonInfo';
+import { PokemonInfo as PokemonInfoInterface } from '../../types/pokemon';
 
 import './PokemonInfo.scss';
 
 const PokemonInfo: React.FC = () => {
   const { name } = useParams();
-  const pokemonState = usePokemon(name);
+  const pokemonState = useData<PokemonInfoInterface>(name, getPokemonInfo);
   const id = pokemonState.data?.id || 0;
   const idImage = id < 10 ? `00${id}` : id < 100 ? `0${id}` : id;
   const urlImage = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${idImage}.png`;

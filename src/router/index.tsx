@@ -4,7 +4,7 @@ import { Router, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 import Main from '../views/Main';
 import PokemonInfo from '../views/PokemonInfo';
-import Ability from '../views/Ability';
+import Ability from '../views/AbilityInfo';
 import PageNotFound from '../components/PageNotFound';
 
 

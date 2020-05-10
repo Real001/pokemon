@@ -2,16 +2,18 @@ import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { ButtonArrow } from '../../components/LinkArrow';
 import { ReactComponent as LoaderIcon } from '../../assets/icons/loader.svg';
-import useAbility from '../../hooks/useAbility';
+import getAbility from '../../services/getAbility';
+import useData from '../../hooks/useData';
+import { Ability } from '../../types/ability';
 
-import './Ability.scss';
+import './AbilityInfo.scss';
 
-const Ability: React.FC = () => {
+const AbilityInfo: React.FC = () => {
   const { name } = useParams();
   const history = useHistory();
-  const abilityState = useAbility(name);
+  const abilityState = useData<Ability>(name, getAbility);
   return (
-    <div className="ability">
+    <div className="ability-info">
       <ButtonArrow onClick={history.goBack} />
       { abilityState.isLoading ? (
         <div className="loading">
@@ -38,4 +40,4 @@ const Ability: React.FC = () => {
   );
 };
 
-export default Ability;
+export default AbilityInfo;

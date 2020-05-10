@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-interface Response<T> {
+export interface Response<T> {
   data?: T;
   error?: Error;
 }
