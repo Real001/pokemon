@@ -50,6 +50,7 @@
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
+    max-width: calc(100vw - 60px);
 
     &__data {
       &__title {
@@ -99,11 +100,13 @@
     }
 
     &__chip {
+      align-items: center;
       border-radius: 15px;
       color: $COLOR_WHITE;
+      display: flex;
+      justify-content: center;
       height: 25px;
       margin-right: 10px;
-      text-align: center;
       width: 100px;
 
       &--grass {
